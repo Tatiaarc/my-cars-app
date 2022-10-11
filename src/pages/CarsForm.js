@@ -5,7 +5,12 @@ import { useEffect, useState } from "react";
 
 function CarsForm() {
   const { createCar, getCar, updateCar } = useCar();
-  const [car, setCar] = useState([]);
+  const [car, setCar] = useState({
+    name: "",
+    serie: "",
+    brand: "",
+    image_url: "",
+  });
   const params = useParams();
   const navigate = useNavigate();
 
@@ -13,12 +18,12 @@ function CarsForm() {
     const loadCar = async () => {
       if (params.id) {
         const car = await getCar(params.id);
-        // console.log(car);
+
         setCar({
           name: car.name,
           serie: car.serie,
           brand: car.brand,
-          imague_url: car.imague_url,
+          image_url: car.image_url,
         });
       }
     };
@@ -39,12 +44,14 @@ function CarsForm() {
           } else {
             await createCar(values);
           }
+          navigate("/");
           setCar({
             name: "",
             serie: "",
             brand: "",
-            imague_url: "",
+            image_url: "",
           });
+          actions.resetForm();
         }}
       >
         {({ handleChange, handleSubmit, values, isSubmitting }) => (

@@ -5,6 +5,7 @@
 /.pnp
 .pnp.js
 
+
 # testing
 /coverage
 
@@ -17,6 +18,10 @@
 .env.development.local
 .env.test.local
 .env.production.local
+.env
+db.sql
+config.js
+sqltools_20221008235752_23484.log
 
 npm-debug.log*
 yarn-debug.log*

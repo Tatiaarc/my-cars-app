@@ -52,8 +52,7 @@ export const CarContextProvider = ({ children }) => {
 
   const updateCar = async (car_id, newFields) => {
     try {
-      const response = await updateCarRequest(car_id, newFields);
-      console.log(response);
+      await updateCarRequest(car_id, newFields);
     } catch (error) {
       console.error(error);
     }

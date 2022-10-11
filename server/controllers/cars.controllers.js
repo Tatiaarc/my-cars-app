@@ -5,7 +5,7 @@ export const getCars = async (req, res) => {
     const [result] = await pool.query(
       "SELECT * FROM cars ORDER BY createdAt DESC"
     );
-    console.log(result);
+
     res.json(result);
   } catch (error) {
     return res.status(500).json({ message: error.message });
@@ -32,7 +32,7 @@ export const createCar = async (req, res) => {
       "INSERT INTO cars(name, serie, brand, image_url) VALUES (?, ?, ?, ?)",
       [name, serie, brand, image_url]
     );
-    console.log(result);
+
     res.json({
       id: result.insertId,
       name,
