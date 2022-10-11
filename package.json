@@ -25,7 +25,7 @@
     "start-js": "react-scripts start",
     "backend-start": "node server/index.js",
     "start": "concurrently \"npm-run-all -p backend-start start-js\"",
-    "build": "npm-run-all build-css && react-scripts build",
+    "build": "npm-run-all react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "dev": "nodemon server/index.js"
