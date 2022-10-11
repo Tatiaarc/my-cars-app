@@ -20,7 +20,7 @@
 .env.production.local
 .env
 db.sql
-config.js
+
 sqltools_20221008235752_23484.log
 
 npm-debug.log*
