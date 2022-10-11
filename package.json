@@ -23,7 +23,7 @@
   "scripts": {
     "client": "npm start --prefix client",
     "clientinstall": "npm install --prefix client",
-    "start": "concurrently \"react-scripts start\" \"node server/index.js",
+    "start": "concurrently \"node server/index.js\" \"react-scripts start",
     "start-js": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
