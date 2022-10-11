@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
+import CarsPage from "./pages/CarsPage.js";
+import CarsForm from "./pages/CarsForm.js";
+import NotFound from "./pages/NotFound.js";
+import { CarContextProvider } from "./context/CarProvider.js";
+
+import Navbar from "./components/Navbar.js";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <CarContextProvider>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<CarsPage />} />
+        <Route path="/new" element={<CarsForm />} />
+        <Route path="/edit/:id" element={<CarsForm />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </CarContextProvider>
   );
 }
 
