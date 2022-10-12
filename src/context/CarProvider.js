@@ -60,7 +60,14 @@ export const CarContextProvider = ({ children }) => {
 
   return (
     <CarContext.Provider
-      value={{ cars, loadCar, deleteCar, createCar, getCar, updateCar }}
+      value={{
+        cars,
+        loadCar,
+        deleteCar,
+        createCar,
+        getCar,
+        updateCar,
+      }}
     >
       {children}
     </CarContext.Provider>
