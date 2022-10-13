@@ -1,0 +1,61 @@
+:root {
+  --light-grey: #f2f2f2;
+  --dar-grey: #5e7a7d;
+  --dark-blue: #226596;
+  --light-blue: #94e5ff;
+  --size-h1: 12px;
+  --white: #fff;
+}
+/* General */
+body {
+  background-color: var(--light-grey);
+  font-family: "Space Mono", monospace;
+  font-size: var(--size-h1);
+  font-weight: 400;
+}
+button {
+  font-family: "Space Mono", monospace;
+  border: 0px;
+}
+/* Header */
+.Header {
+  background-color: var(--dark-blue);
+  color: var(--light-blue);
+  display: grid;
+  grid-template-columns: 100px 2fr 1fr;
+}
+.Header-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Header-logo img {
+  width: 47px;
+  height: 47px;
+}
+/* Navbar */
+.Navbar {
+  display: inline-grid;
+  gap: 15px;
+  padding-top: 40px;
+}
+.Navbar-button {
+  background-color: var(--light-blue);
+  height: 38px;
+  width: 250px;
+}
+.Navbar-button .Link {
+  color: var(--dark-blue);
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none;
+  width: 100%;
+  cursor: pointer;
+}
+/* CarPage */
+.CarPage {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr;
+}

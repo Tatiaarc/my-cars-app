@@ -5,11 +5,13 @@ import CarsForm from "./pages/CarsForm.js";
 import NotFound from "./pages/NotFound.js";
 import { CarContextProvider } from "./context/CarProvider.js";
 
+import Header from "./components/Header.js";
 import Navbar from "./components/Navbar.js";
 
 function App() {
   return (
     <CarContextProvider>
+      <Header />
       <Navbar />
       <Routes>
         <Route path="/" element={<CarsPage />} />

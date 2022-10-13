@@ -1,3 +1,5 @@
+import "../App.css";
+
 import { useEffect, useState } from "react";
 
 import CarCard from "../components/CarCard.js";
@@ -65,38 +67,49 @@ function CarsPage() {
   }
 
   return (
-    <div>
-      <h1>Cars</h1>
-      <h3>Search</h3>
-      <input
-        className="TodoSearch"
-        placeholder=""
-        onChange={onSearchValueChange}
-      />
-      <button onClick={() => setEmpty()}>All Cars</button>
-      <h3>Serie Buttons</h3>
-      {series_unique.map((serie) => (
-        <button
-          id={serie}
-          value={serie}
-          key={serie}
-          onClick={() => serieFilter(serie)}
-        >
-          {serie}
-        </button>
-      ))}
-      <h3>Brand Buttons</h3>
-      {brand_unique.map((brand) => (
-        <button
-          id={brand}
-          value={brand}
-          key={brand}
-          onClick={() => brandFilter(brand)}
-        >
-          {brand}
-        </button>
-      ))}
-      {renderFilter()}
+    <div className="CarPage">
+      {/* <h1>Cars</h1> */}
+
+      <div className="CarPage-menu">
+        <div className="CarPage-search">
+          <h3>Search</h3>
+          <input
+            className="TodoSearch"
+            placeholder=""
+            onChange={onSearchValueChange}
+          />
+        </div>
+        <div className="CarPage-all-button">
+          <button onClick={() => setEmpty()}>All Cars</button>
+        </div>
+        <div className="CarPage-serie">
+          <h3>Serie Buttons</h3>
+          {series_unique.map((serie) => (
+            <button
+              id={serie}
+              value={serie}
+              key={serie}
+              onClick={() => serieFilter(serie)}
+            >
+              {serie}
+            </button>
+          ))}
+        </div>
+        <div className="CarPage-brand">
+          <h3>Brand Buttons</h3>
+          {brand_unique.map((brand) => (
+            <button
+              id={brand}
+              value={brand}
+              key={brand}
+              onClick={() => brandFilter(brand)}
+            >
+              {brand}
+            </button>
+          ))}
+        </div>
+      </div>
+      <div className="CarPage-main">{renderFilter()}</div>
     </div>
   );
 }
