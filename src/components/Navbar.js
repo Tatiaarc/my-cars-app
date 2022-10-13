@@ -4,7 +4,7 @@ function Navbar() {
   return (
     <div>
       <button>
-        <Link to="/">All Cars</Link>
+        <Link to="/">Home</Link>
       </button>
       <button>
         <Link to="/new">New Car</Link>
