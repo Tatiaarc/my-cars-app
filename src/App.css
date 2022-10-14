@@ -1,8 +1,11 @@
 :root {
   --light-grey: #f2f2f2;
-  --dar-grey: #5e7a7d;
+  --light-grey-bc: #f3f9fa;
+  --dark-grey: #5e7a7d;
+  --dark-grey-bc: #979797;
   --dark-blue: #226596;
   --light-blue: #94e5ff;
+  --font-dark-blue: #5e7a7d;
   --size-h1: 12px;
   --white: #fff;
 }
@@ -15,9 +18,10 @@ body {
 }
 button {
   font-family: "Space Mono", monospace;
-  border: 0px;
+  border: 1px solid var(--dark-blue);
 }
-/* Header */
+
+/* Header  */
 .Header {
   background-color: var(--dark-blue);
   color: var(--light-blue);
@@ -43,7 +47,22 @@ button {
 .Navbar-button {
   background-color: var(--light-blue);
   height: 38px;
-  width: 250px;
+  width: 240px;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  background-color: var(--light-blue);
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+.Navbar-button:hover {
+  background-color: var(--dark-blue);
+  color: var(--white);
+  box-shadow: 0px 15px 20px var(--dark-blue);
+  transform: translateY(-3px);
 }
 .Navbar-button .Link {
   color: var(--dark-blue);
@@ -52,10 +71,156 @@ button {
   text-decoration: none;
   width: 100%;
   cursor: pointer;
+
+  padding-left: 62px;
+  padding-right: 62px;
+}
+.Navbar-button:hover {
+  color: var(--white);
+}
+.Navbar-button .Link:hover {
+  color: var(--white);
 }
 /* CarPage */
 .CarPage {
   display: grid;
   grid-template-columns: 1fr 4fr;
   grid-template-rows: 1fr;
+}
+.CarPage-menu {
+  width: 220px;
+  background-color: var(--white);
+  color: var(--font-dark-blue);
+  border-radius: 10px;
+  margin-top: 20px;
+  font-size: 13px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.CarPage-menu h3 {
+  padding-left: 6px;
+}
+.Car-search-input {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+.Car-search-input input {
+  width: 200px;
+  height: 28px;
+  background-color: var(--light-grey-bc);
+  border: 1px solid var(--dark-grey-bc);
+  font-size: 14px;
+}
+.CarPage-all-button {
+  display: flex;
+  justify-content: center;
+}
+.CarPage-serie,
+.CarPage-brand {
+  background-color: var(--light-grey-bc);
+  border: 1px solid var(--dark-grey-bc);
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  height: 160px;
+  width: 200px;
+  overflow-y: scroll;
+  border-radius: 10px;
+}
+
+.CarPage-selection-button {
+  background-color: var(--dark-blue);
+  color: var(--white);
+  width: 180px;
+  border-radius: 26px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  text-align: left;
+  padding-left: 12px;
+}
+.CarPage-main {
+  background-color: var(--white);
+  border-radius: 10px;
+  margin-left: 14px;
+  margin-right: 20px;
+  margin-top: 20px;
+  padding: 16px;
+  width: 100%;
+}
+.CarPage-count span {
+  color: var(--dark-grey);
+  font-size: 16px;
+  font-weight: bold;
+}
+.CarPage-cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+/* CarCard */
+
+.CarCard {
+  background-color: var(--dark-blue);
+  margin: 8px;
+  width: 220px;
+  height: 286px;
+  border-radius: 10px;
+}
+.CarCard:hover {
+  background-color: var(--dark-blue);
+  color: var(--white);
+  box-shadow: 0px 15px 20px var(--dark-blue);
+  transform: translateY(-3px);
+}
+.CarCard-delete {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 20px;
+  padding-top: 8px;
+  /* margin-bottom: 12px; */
+}
+.CarCard-delete .gg-close {
+  color: var(--white);
+  width: 4px;
+  cursor: pointer;
+}
+.CarCard-image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.CarCard-image img {
+  width: 188px;
+  height: 146px;
+  border-radius: 10px;
+}
+.CarCard h2 {
+  font-size: 16px;
+  color: var(--white);
+  margin: 0;
+  font-weight: 400;
+  margin-top: 8px;
+  margin-left: 16px;
+}
+.CarCard h3 {
+  font-size: 12px;
+  color: var(--white);
+  margin: 0;
+  font-weight: 400;
+  margin-top: 4px;
+  margin-left: 16px;
+}
+.CarCard-button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
+}
+.CarCard-button button {
+  width: 190px;
+  height: 30px;
+  border-radius: 10px;
+  cursor: pointer;
 }

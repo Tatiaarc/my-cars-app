@@ -1,3 +1,4 @@
+import "../App.css";
 import { Formik, Form } from "formik";
 import { useCar } from "../context/CarProvider.js";
 import { useParams, useNavigate } from "react-router-dom";

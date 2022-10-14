@@ -73,43 +73,58 @@ function CarsPage() {
       <div className="CarPage-menu">
         <div className="CarPage-search">
           <h3>Search</h3>
-          <input
-            className="TodoSearch"
-            placeholder=""
-            onChange={onSearchValueChange}
-          />
+          <div className="Car-search-input">
+            <input
+              className="carSearch"
+              placeholder=""
+              onChange={onSearchValueChange}
+            />
+          </div>
         </div>
         <div className="CarPage-all-button">
-          <button onClick={() => setEmpty()}>All Cars</button>
+          <button
+            className="CarPage-selection-button"
+            onClick={() => setEmpty()}
+          >
+            All Cars
+          </button>
         </div>
+        <h3>Serie Buttons</h3>
         <div className="CarPage-serie">
-          <h3>Serie Buttons</h3>
           {series_unique.map((serie) => (
             <button
               id={serie}
               value={serie}
               key={serie}
               onClick={() => serieFilter(serie)}
+              className="CarPage-selection-button"
             >
               {serie}
             </button>
           ))}
         </div>
+        <h3>Brand Buttons</h3>
         <div className="CarPage-brand">
-          <h3>Brand Buttons</h3>
           {brand_unique.map((brand) => (
             <button
               id={brand}
               value={brand}
               key={brand}
               onClick={() => brandFilter(brand)}
+              className="CarPage-selection-button"
             >
               {brand}
             </button>
           ))}
         </div>
       </div>
-      <div className="CarPage-main">{renderFilter()}</div>
+
+      <div className="CarPage-main">
+        <div className="CarPage-count">
+          <span>20 cars</span>
+        </div>
+        <div className="CarPage-cards">{renderFilter()}</div>
+      </div>
     </div>
   );
 }

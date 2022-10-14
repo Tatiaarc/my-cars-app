@@ -1,3 +1,4 @@
+import "../App.css";
 import { useCar } from "../context/CarProvider.js";
 import { useNavigate } from "react-router-dom";
 
@@ -6,13 +7,20 @@ function CarCard({ car }) {
   const navigate = useNavigate();
 
   return (
-    <div>
-      <h2>{car.name}</h2>
-      <p>{car.serie}</p>
-      <p>{car.brand}</p>
-      <p>{car.image_url}</p>
-      <button onClick={() => deleteCar(car.car_id)}>Delete</button>
-      <button onClick={() => navigate(`/edit/${car.car_id}`)}>Edit</button>
+    <div className="CarCard">
+      <div className="CarCard-delete">
+        <i className="gg-close" onClick={() => deleteCar(car.car_id)}></i>
+      </div>
+      <div className="CarCard-image">
+        <img src={car.image_url} alt="car" />
+      </div>
+      <div className="CarCard-text">
+        <h2>{car.name}</h2>
+        <h3>{car.serie}</h3>
+      </div>
+      <div className="CarCard-button">
+        <button onClick={() => navigate(`/edit/${car.car_id}`)}>Open</button>
+      </div>
     </div>
   );
 }
