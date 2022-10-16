@@ -9,7 +9,7 @@ function Navbar() {
           Home
         </Link>
       </button>
-      <button className="Navbar-button">
+      <button className="Navbar-button new">
         <Link to="/new" className="Link">
           New Car
         </Link>
