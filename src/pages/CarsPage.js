@@ -65,14 +65,29 @@ function CarsPage() {
     else
       return filteredCar.map((car) => <CarCard car={car} key={car.car_id} />);
   }
+  function closeIcon() {
+    // console.log("test");
+    document.getElementById("CarPage-menu").style.display = "none";
+  }
+  function searchIcon() {
+    // console.log("test");
+    document.getElementById("CarPage-menu").style.display = "grid";
+  }
 
   return (
     <div className="CarPage">
       {/* <h1>Cars</h1> */}
 
-      <div className="CarPage-menu">
-        <div className="CarPage-search">
-          <h3>Search</h3>
+      <div className="CarPage-menu" id="CarPage-menu">
+        <div className="CarPage-search" id="CarPage-search">
+          <div className="CarPage-search-title">
+            <h3>Search</h3>
+            <i
+              className="gg-close"
+              id="gg-close"
+              onClick={() => closeIcon()}
+            ></i>
+          </div>
           <div className="Car-search-input">
             <input
               className="carSearch"
@@ -122,6 +137,7 @@ function CarsPage() {
       <div className="CarPage-main">
         <div className="CarPage-count">
           <span>20 cars</span>
+          <i className="gg-search" onClick={() => searchIcon()}></i>
         </div>
         <div className="CarPage-cards">{renderFilter()}</div>
       </div>

@@ -278,6 +278,12 @@ button {
   border-radius: 10px;
   width: 460px;
   padding-top: 14px;
+  transition: all 0.3s ease 0s;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0px 1px 1px var(--dark-blue);
+  transform: translateY(-2px);
 }
 .CardForm-Form-create label {
   font-size: 16px;
@@ -326,11 +332,16 @@ button {
 .CardForm-Form-edit {
   display: grid;
   background-color: var(--dark-blue);
-
   border: 1px solid var(--border-dark-grey);
   border-radius: 10px;
   width: 420px;
   padding-top: 14px;
+  transition: all 0.3s ease 0s;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0px 1px 1px var(--dark-blue);
+  transform: translateY(-2px);
 }
 .CardForm-Form-edit label {
   font-size: 16px;
@@ -386,4 +397,102 @@ button {
   width: 90%;
   /* height: 300px; */
   border-radius: 10px;
+}
+.gg-search,
+.gg-close {
+  display: none;
+}
+@media only screen and (max-width: 500px) {
+  .Header h1 {
+    font-size: 16px;
+    margin: 4px;
+  }
+  .Header-logo img {
+    height: 36px;
+    width: 36px;
+  }
+  .Header-me-logo img {
+    width: 46px;
+    height: 46px;
+  }
+  .Navbar {
+    padding-top: 18px;
+    display: grid;
+    justify-content: center;
+  }
+  .Navbar-button {
+    width: 220px;
+    height: 28px;
+  }
+  .Navbar-button.new {
+    margin: 0;
+    display: flex;
+    /* padding-top: 5px; */
+  }
+  .Navbar-button .Link {
+    font-size: 16px;
+    padding: 0;
+  }
+
+  .CarPage-main {
+    display: grid;
+
+    left: 0;
+  }
+  .CarPage-count {
+    padding-left: 12px;
+  }
+  .CarPage-cards {
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+  }
+  .CardForm-title h1 {
+    font-size: 20px;
+  }
+  .CardForm-Form-create,
+  .CardForm-Form-edit {
+    width: 320px;
+  }
+  .CardForm-Form-create label {
+    margin-left: 18px;
+    font-size: 14px;
+  }
+  .CardForm-Form-create input {
+    margin-left: 16px;
+    font-size: 12px;
+  }
+
+  .CardForm-Form-edit label {
+    margin-left: 18px;
+    font-size: 14px;
+  }
+  .CardForm-Form-edit input {
+    margin-left: 16px;
+    font-size: 12px;
+  }
+  .CardForm-photo-edit img {
+    width: 286px;
+  }
+  .CarPage-menu {
+    display: grid;
+    z-index: 2;
+  }
+  .CarPage-search-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .CarPage-count {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 14px;
+    color: var(--dark-grey);
+    font-size: 16px;
+  }
+  .gg-search,
+  .gg-close {
+    display: none;
+  }
 }
