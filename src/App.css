@@ -403,6 +403,10 @@ button {
   display: none;
 }
 @media only screen and (max-width: 500px) {
+  .gg-search,
+  .gg-close {
+    display: flex;
+  }
   .Header h1 {
     font-size: 16px;
     margin: 4px;
@@ -475,7 +479,7 @@ button {
     width: 286px;
   }
   .CarPage-menu {
-    display: grid;
+    display: none;
     z-index: 2;
   }
   .CarPage-search-title {
@@ -490,9 +494,5 @@ button {
     padding-right: 14px;
     color: var(--dark-grey);
     font-size: 16px;
-  }
-  .gg-search,
-  .gg-close {
-    display: none;
   }
 }
