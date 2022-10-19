@@ -2,7 +2,9 @@ import { pool } from "../db.js";
 
 export const getCars = async (req, res) => {
   try {
-    const [result] = await pool.query("SELECT * FROM cars ORDER BY serie ASC");
+    const [result] = await pool.query(
+      "SELECT * FROM cars ORDER BY createdAt DESC"
+    );
 
     res.json(result);
   } catch (error) {
