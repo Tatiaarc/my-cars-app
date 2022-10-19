@@ -457,6 +457,7 @@ button {
   .CardForm-Form-create,
   .CardForm-Form-edit {
     width: 320px;
+    padding-right: 10px;
   }
   .CardForm-Form-create label {
     margin-left: 18px;
@@ -464,6 +465,8 @@ button {
   }
   .CardForm-Form-create input {
     margin-left: 16px;
+    margin-right: 26px;
+
     font-size: 12px;
   }
 
@@ -473,6 +476,8 @@ button {
   }
   .CardForm-Form-edit input {
     margin-left: 16px;
+    /* margin-right: 26px; */
+    padding-right: 2px;
     font-size: 12px;
   }
   .CardForm-photo-edit img {
@@ -481,6 +486,7 @@ button {
   .CarPage-menu {
     display: none;
     z-index: 2;
+    padding-bottom: 12px;
   }
   .CarPage-search-title {
     display: flex;

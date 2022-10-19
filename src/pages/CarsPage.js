@@ -65,6 +65,12 @@ function CarsPage() {
     else
       return filteredCar.map((car) => <CarCard car={car} key={car.car_id} />);
   }
+  function renderCount() {
+    if (filteredCar.length === 0 && !searchValue.length >= 1)
+      return cars.length;
+    else if (searchValue.length >= 1) return searchedCars.length;
+    else return filteredCar.length;
+  }
   function closeIcon() {
     // console.log("test");
     document.getElementById("CarPage-menu").style.display = "none";
@@ -136,7 +142,7 @@ function CarsPage() {
 
       <div className="CarPage-main">
         <div className="CarPage-count">
-          <span>20 cars</span>
+          <span>{renderCount()} cars</span>
           <i className="gg-search" onClick={() => searchIcon()}></i>
         </div>
         <div className="CarPage-cards">{renderFilter()}</div>

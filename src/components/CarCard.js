@@ -9,7 +9,10 @@ function CarCard({ car }) {
   return (
     <div className="CarCard">
       <div className="CarCard-delete">
-        <i className="gg-close" onClick={() => deleteCar(car.car_id)}></i>
+        <i
+          className="gg-close delete"
+          onClick={() => deleteCar(car.car_id)}
+        ></i>
       </div>
       <div className="CarCard-image">
         <img src={car.image_url} alt="car" />
