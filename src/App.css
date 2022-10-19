@@ -80,7 +80,7 @@ button {
   transform: translateY(-3px);
 }
 .Navbar-button.new {
-  margin-left: 18px;
+  margin-left: 8px;
 }
 .Navbar-button .Link {
   color: var(--dark-blue);
@@ -181,6 +181,9 @@ button {
   position: absolute;
   left: 280px;
 }
+.CarPage-count {
+  margin-bottom: 12px;
+}
 .CarPage-count span {
   color: var(--dark-grey);
   font-size: 16px;
@@ -215,7 +218,7 @@ button {
   /* margin-bottom: 12px; */
 }
 .CarCard-delete .gg-close {
-  color: var(--white);
+  color: var(--dark-blue);
   width: 4px;
   cursor: pointer;
 }
@@ -399,12 +402,12 @@ button {
   border-radius: 10px;
 }
 .gg-search,
-.gg-close {
+.gg-close-o {
   display: none;
 }
 @media only screen and (max-width: 500px) {
   .gg-search,
-  .gg-close {
+  .gg-close-o {
     display: flex;
   }
   .Header h1 {

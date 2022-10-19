@@ -89,8 +89,8 @@ function CarsPage() {
           <div className="CarPage-search-title">
             <h3>Search</h3>
             <i
-              className="gg-close"
-              id="gg-close"
+              className="gg-close-o"
+              id="gg-close-o"
               onClick={() => closeIcon()}
             ></i>
           </div>
